@@ -1,7 +1,26 @@
 [gd_scene format=3 uid="uid://bo6m017k2qk45"]
 
 [ext_resource type="PackedScene" uid="uid://bhh7svnvb1aql" path="res://player.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://bejcrmu3yer4m" path="res://mob.tscn" id="2_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://c8vpeadav26b1" path="res://main.tscn" id="3_kdubu"]
+[ext_resource type="Script" uid="uid://bsuu240rixfoa" path="res://main.gd" id="4_d21ai"]
+[ext_resource type="PackedScene" uid="uid://dx5cgn77vvrx0" path="res://hud.tscn" id="5_rj586"]
 
 [node name="Node2D" type="Node2D" unique_id=902535668]
 
 [node name="Player" parent="." unique_id=1815091353 instance=ExtResource("1_wtcfe")]
+
+[node name="Mob" parent="." unique_id=437592956 instance=ExtResource("2_q6r6c")]
+
+[node name="Main" parent="." unique_id=1864053337 instance=ExtResource("3_kdubu")]
+script = ExtResource("4_d21ai")
+
+[node name="HUD" parent="Main" unique_id=1977994480 instance=ExtResource("5_rj586")]
+
+[node name="ColorRect" type="ColorRect" parent="Main" unique_id=1443714958]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Main" unique_id=1988512348]
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="Main" unique_id=1587176260]

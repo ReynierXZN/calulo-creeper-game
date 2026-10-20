@@ -9,3 +9,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+# Play background music when a game starts.
+
+# Stop background music when the game ends.
+
+# Play the game-over sound.
+
+# Configure the main scene as the project entry point.
